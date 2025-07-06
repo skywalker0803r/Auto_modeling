@@ -45,7 +45,7 @@ import warnings
 warnings.filterwarnings("ignore")
 
 def train_model(train_X, train_y):
-    model = RandomForestRegressor(n_estimators=1000, random_state=42, n_jobs=-1, min_samples_leaf=1, max_depth=None, max_features=1.0, criterion='absolute_error', min_samples_split=10)
+    model = RandomForestRegressor(n_estimators=1000, random_state=42, n_jobs=-1, min_samples_leaf=1, max_depth=None, max_features='sqrt')
     return model.fit(train_X, train_y)
 
 # 1. 時間排序
